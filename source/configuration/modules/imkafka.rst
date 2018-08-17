@@ -129,9 +129,25 @@ Ruleset
    :widths: auto
    :class: parameter-table
 
-   "string", "none", "no", "none"
+   "binary", "none", "no", "none"
 
 Specifies the ruleset to be used.
+
+
+ParseHostname
+^^^^^^^
+
+.. csv-table::
+   :header: "type", "default", "mandatory", "|FmtObsoleteName| directive"
+   :widths: auto
+   :class: parameter-table
+
+   "string", "off", "no", "none"
+
+.. versionadded:: 8.38.0
+
+Parse the hostname in log from kafka if it exists.
+The result can be retrieve from $hostname.
 
 
 Caveats/Known Bugs
@@ -157,5 +173,3 @@ In this sample a consumer for the topic static is created and will forward the m
    ruleset(name="pRuleset") {
    	action(type="omfile" file="path/to/file")
    }
-
-
