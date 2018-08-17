@@ -135,7 +135,7 @@ Specifies the ruleset to be used.
 
 
 ParseHostname
-^^^^^^^
+^^^^^^^^^^^^^
 
 .. csv-table::
    :header: "type", "default", "mandatory", "|FmtObsoleteName| directive"
@@ -145,9 +145,12 @@ ParseHostname
    "string", "off", "no", "none"
 
 .. versionadded:: 8.38.0
+If this parameter is set to on, imkafka will parse the hostname in log
+if it exists. The result can be retrieve from $hostname. If it's off,
+For compatibility reasons, an incorrect one would be in $hostname
+as the previous version.
 
-Parse the hostname in log from kafka if it exists.
-The result can be retrieve from $hostname.
+
 
 
 Caveats/Known Bugs
