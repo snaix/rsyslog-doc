@@ -142,7 +142,7 @@ ParseHostname
    :widths: auto
    :class: parameter-table
 
-   "string", "off", "no", "none"
+   "binary", "off", "no", "none"
 
 .. versionadded:: 8.38.0
 If this parameter is set to on, imkafka will parse the hostname in log
